@@ -1,0 +1,34 @@
+*{
+    border: 2px solid black;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+}
+
+.calculator{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 10px;
+}
+
+.display{
+    width: 495px;
+    height: 80px;
+}
+
+.buttons{
+    width: 495px;
+    height: 400px;
+}
