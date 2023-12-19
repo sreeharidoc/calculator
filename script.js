@@ -48,6 +48,7 @@ container.appendChild(calculator)
 
 const display = document.createElement("div")
 display.classList.add("display")
+display.textContent = "5432"
 calculator.appendChild(display)
 
 const buttons = document.createElement("div")
@@ -78,6 +79,11 @@ const equalTo = document.createElement("button")
 equalTo.classList.add("button")
 equalTo.textContent = "="
 buttons.appendChild(equalTo)
+
+const clear = document.createElement("button")
+clear.classList.add("button")
+clear.textContent = "CE"
+buttons.appendChild(clear)
 
 
 

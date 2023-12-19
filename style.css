@@ -29,6 +29,9 @@ body{
     width: 495px;
     height: 80px;
     background-color: rgb(240, 242, 245);
+    display: flex;
+    justify-content: flex-end;
+    font-size: 75px;
 }
 
 .buttons{
