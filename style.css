@@ -12,6 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 150px;
+    background-color: rgb(34, 179, 94);
 }
 
 .calculator{
@@ -21,6 +22,7 @@ body{
     flex-direction: column;
     padding: 5px;
     gap: 10px;
+    background-color: rgb(20, 122, 140);
 }
 
 .display{
