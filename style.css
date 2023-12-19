@@ -28,9 +28,20 @@ body{
 .display{
     width: 495px;
     height: 80px;
+    background-color: rgb(240, 242, 245);
 }
 
 .buttons{
     width: 495px;
     height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.button{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
 }

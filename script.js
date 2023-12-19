@@ -54,6 +54,32 @@ const buttons = document.createElement("div")
 buttons.classList.add("buttons")
 calculator.appendChild(buttons)
 
+const addition = document.createElement("button")
+addition.classList.add("button")
+addition.textContent = "+"
+buttons.appendChild(addition)
+
+const subtraction = document.createElement("button")
+subtraction.classList.add("button")
+subtraction.textContent = "-"
+buttons.appendChild(subtraction)
+
+const multiplication = document.createElement("button")
+multiplication.classList.add("button")
+multiplication.textContent = "*"
+buttons.appendChild(multiplication)
+
+const division = document.createElement("button")
+division.classList.add("button")
+division.textContent = "÷"
+buttons.appendChild(division)
+
+const equalTo = document.createElement("button")
+equalTo.classList.add("button")
+equalTo.textContent = "="
+buttons.appendChild(equalTo)
+
+
 
 
 
