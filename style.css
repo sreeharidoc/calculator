@@ -38,10 +38,29 @@ body{
     width: 495px;
     height: 400px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
+
+.display-rows{
+    width: 480px;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+/* .buttons{
+    width: 495px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+} */
 
 .button{
     width: 50px;

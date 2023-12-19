@@ -55,35 +55,101 @@ const buttons = document.createElement("div")
 buttons.classList.add("buttons")
 calculator.appendChild(buttons)
 
+const firstRow = document.createElement("div")
+firstRow.classList.add("display-rows")
+buttons.appendChild(firstRow)
+
+const secondRow = document.createElement("div")
+secondRow.classList.add("display-rows")
+buttons.appendChild(secondRow)
+
+const thirdRow = document.createElement("div")
+thirdRow.classList.add("display-rows")
+buttons.appendChild(thirdRow)
+
+const fourthRow = document.createElement("div")
+fourthRow.classList.add("display-rows")
+buttons.appendChild(fourthRow)
+
+const one = document.createElement("button")
+one.classList.add("button")
+one.textContent = 1
+firstRow.appendChild(one)
+
+const two = document.createElement("button")
+two.classList.add("button")
+two.textContent = 2
+firstRow.appendChild(two)
+
+const three = document.createElement("button")
+three.classList.add("button")
+three.textContent = 3
+firstRow.appendChild(three)
+
 const addition = document.createElement("button")
 addition.classList.add("button")
 addition.textContent = "+"
-buttons.appendChild(addition)
+firstRow.appendChild(addition)
+
+const four = document.createElement("button")
+four.classList.add("button")
+four.textContent = 4
+secondRow.appendChild(four)
+
+const five = document.createElement("button")
+five.classList.add("button")
+five.textContent = 5
+secondRow.appendChild(five)
+
+const six = document.createElement("button")
+six.classList.add("button")
+six.textContent = 6
+secondRow.appendChild(six)
 
 const subtraction = document.createElement("button")
 subtraction.classList.add("button")
 subtraction.textContent = "-"
-buttons.appendChild(subtraction)
+secondRow.appendChild(subtraction)
+
+const seven = document.createElement("button")
+seven.classList.add("button")
+seven.textContent = 7
+thirdRow.appendChild(seven)
+
+const eight = document.createElement("button")
+eight.classList.add("button")
+eight.textContent = 8
+thirdRow.appendChild(eight)
+
+const nine = document.createElement("button")
+nine.classList.add("button")
+nine.textContent = 9
+thirdRow.appendChild(nine)
 
 const multiplication = document.createElement("button")
 multiplication.classList.add("button")
 multiplication.textContent = "*"
-buttons.appendChild(multiplication)
+thirdRow.appendChild(multiplication)
+
+const zero = document.createElement("button")
+zero.classList.add("button")
+zero.textContent = 0
+fourthRow.appendChild(zero)
 
 const division = document.createElement("button")
 division.classList.add("button")
 division.textContent = "÷"
-buttons.appendChild(division)
+fourthRow.appendChild(division)
 
 const equalTo = document.createElement("button")
 equalTo.classList.add("button")
 equalTo.textContent = "="
-buttons.appendChild(equalTo)
+fourthRow.appendChild(equalTo)
 
 const clear = document.createElement("button")
 clear.classList.add("button")
 clear.textContent = "CE"
-buttons.appendChild(clear)
+fourthRow.appendChild(clear)
 
 
 
