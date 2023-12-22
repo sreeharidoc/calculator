@@ -16,9 +16,10 @@ function divide(a,b){
 
 var num1 = 10;
 var num2 = 5;
-var operator = "+";
+var operator = "";
 var variable = "";
-
+var firstValue;
+var secondValue;
 
 function operate(num1,num2,operator){
     switch(operator){
@@ -50,7 +51,7 @@ container.appendChild(calculator)
 
 const display = document.createElement("div")
 display.classList.add("display")
-display.textContent = "5432"
+display.textContent = "0"
 calculator.appendChild(display)
 
 const buttons = document.createElement("div")
@@ -203,6 +204,34 @@ zero.addEventListener("click",() =>{
     display.textContent = variable;
 })
 
+addition.addEventListener("click",() =>{
+    operator = "+";
+    firstValue = parseInt(variable)
+    variable = ""
+    display.textContent = variable
+})
+
+subtraction.addEventListener("click",() =>{
+    operator = "-";
+    firstValue = parseInt(variable)
+    variable = ""
+    display.textContent = variable
+    console.log(operator)
+})
+
+multiplication.addEventListener("click",() =>{
+    operator = "*";
+    firstValue = parseInt(variable)
+    variable = ""
+    display.textContent = variable
+})
+
+division.addEventListener("click",() =>{
+    operator = "÷";
+    firstValue = parseInt(variable)
+    variable = ""
+    display.textContent = variable
+})
 
 
 
