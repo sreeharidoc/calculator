@@ -24,17 +24,13 @@ var secondValue;
 function operate(num1,num2,operator){
     switch(operator){
         case '+':
-            console.log(add(num1,num2));
-            break;
+            return add(num1,num2);
         case "-":
-            console.log(subtract(num1,num2));
-            break;
+            return subtract(num1,num2);
         case "*":
-            console.log(multiply(num1,num2));
-            break;
-        case "/":
-            console.log(divide(num1,num2));
-            break;
+            return multiply(num1,num2);
+        case "÷":
+            return divide(num1,num2);
         default:
             alert("No Value")
     }
@@ -231,6 +227,13 @@ division.addEventListener("click",() =>{
     firstValue = parseInt(variable)
     variable = ""
     display.textContent = variable
+})
+
+equalTo.addEventListener("click",()=>{
+    secondValue = parseInt(variable)
+    variable = ""
+    result = operate(firstValue,secondValue,operator)
+    display.textContent = result
 })
 
 
