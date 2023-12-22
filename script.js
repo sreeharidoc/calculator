@@ -14,9 +14,11 @@ function divide(a,b){
     return a/b
 }
 
-var num1 = 10
-var num2 = 5
-var operator = "+"
+var num1 = 10;
+var num2 = 5;
+var operator = "+";
+var variable = "";
+
 
 function operate(num1,num2,operator){
     switch(operator){
@@ -150,6 +152,57 @@ const clear = document.createElement("button")
 clear.classList.add("button")
 clear.textContent = "CE"
 fourthRow.appendChild(clear)
+
+one.addEventListener("click",() =>{
+    variable = variable + "1";
+    display.textContent = variable;
+})
+
+two.addEventListener("click",() =>{
+    variable = variable + "2";
+    display.textContent = variable;
+})
+
+three.addEventListener("click",() =>{
+    variable = variable + "3";
+    display.textContent = variable;
+})
+
+four.addEventListener("click",() =>{
+    variable = variable + "4";
+    display.textContent = variable;
+})
+
+five.addEventListener("click",() =>{
+    variable = variable + "5";
+    display.textContent = variable;
+})
+
+six.addEventListener("click",() =>{
+    variable = variable + "6";
+    display.textContent = variable;
+})
+
+seven.addEventListener("click",() =>{
+    variable = variable + "7";
+    display.textContent = variable;
+})
+
+eight.addEventListener("click",() =>{
+    variable = variable + "8";
+    display.textContent = variable;
+})
+
+nine.addEventListener("click",() =>{
+    variable = variable + "9";
+    display.textContent = variable;
+})
+
+zero.addEventListener("click",() =>{
+    variable = variable + "0";
+    display.textContent = variable;
+})
+
 
 
 
