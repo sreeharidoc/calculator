@@ -14,8 +14,7 @@ function divide(a,b){
     return a/b
 }
 
-var num1 = 10;
-var num2 = 5;
+
 var operator = "";
 var variable = "";
 var firstValue;
@@ -236,7 +235,13 @@ equalTo.addEventListener("click",()=>{
     variable = result
 })
 
-
+clear.addEventListener("click",()=>{
+    firstValue =""
+    secondValue =""
+    variable = ""
+    operator = ""
+    display.textContent = "0"
+})
 
 
 
