@@ -20,6 +20,7 @@ var operator = "";
 var variable = "";
 var firstValue;
 var secondValue;
+var result;
 
 function operate(num1,num2,operator){
     switch(operator){
@@ -212,7 +213,6 @@ subtraction.addEventListener("click",() =>{
     firstValue = parseInt(variable)
     variable = ""
     display.textContent = variable
-    console.log(operator)
 })
 
 multiplication.addEventListener("click",() =>{
@@ -231,9 +231,9 @@ division.addEventListener("click",() =>{
 
 equalTo.addEventListener("click",()=>{
     secondValue = parseInt(variable)
-    variable = ""
     result = operate(firstValue,secondValue,operator)
-    display.textContent = result
+    display.textContent = result;
+    variable = result
 })
 
 
