@@ -71,4 +71,9 @@ body{
     width: 150px;
     height: 90px;
     font-size: 25px;
+    color: white;
+}
+
+#clear{
+    background-color: #F875AA;
 }

@@ -151,6 +151,7 @@ fourthRow.appendChild(equalTo)
 
 const clear = document.createElement("button")
 clear.classList.add("button")
+clear.id = "clear"
 clear.textContent = "CE"
 fourthRow.appendChild(clear)
 
