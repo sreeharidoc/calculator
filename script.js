@@ -38,6 +38,10 @@ function operate(num1,num2,operator){
 
 const body = document.querySelector("body")
 
+const header = document.createElement("div")
+header.classList.add("header")
+header.textContent = "Calculator"
+
 const container = document.createElement("div")
 container.classList.add("container")
 
@@ -285,4 +289,5 @@ clear.addEventListener("click",()=>{
     display.textContent = "0";
 })
 
+body.appendChild(header)
 body.appendChild(container)
