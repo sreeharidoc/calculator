@@ -36,6 +36,22 @@ function operate(num1,num2,operator){
     }
 }
 
+function changeValue(op){
+    if (firstValue != ""){
+        secondValue = parseFloat(variable)
+        variable = ""
+        result = operate(firstValue,secondValue,operator)
+        display.textContent = result
+        operator = op
+        firstValue = result
+    }else{
+        operator = op
+        firstValue = parseFloat(variable)
+        variable = ""
+        display.textContent = variable
+    }
+}
+
 const body = document.querySelector("body")
 
 const header = document.createElement("div")
@@ -206,67 +222,19 @@ zero.addEventListener("click",() =>{
 })
 
 addition.addEventListener("click",() =>{
-    if (firstValue != ""){
-        secondValue = parseFloat(variable)
-        variable = ""
-        result = operate(firstValue,secondValue,operator)
-        display.textContent = result
-        operator = "+"
-        firstValue = result
-    }else{
-        operator = "+"
-        firstValue = parseFloat(variable)
-        variable = ""
-        display.textContent = variable
-    }
+    changeValue("+")
 })
 
 subtraction.addEventListener("click",() =>{
-    if (firstValue != ""){
-        secondValue = parseFloat(variable)
-        variable =""
-        result = operate(firstValue,secondValue,operator)
-        display.textContent = result
-        operator = "-";
-        firstValue = result
-    }else{
-        operator = "-";
-        firstValue = parseFloat(variable)
-        variable = ""
-        display.textContent = variable
-    }
+    changeValue("-")
 })
 
 multiplication.addEventListener("click",() =>{
-    if (firstValue != ""){
-        secondValue = parseFloat(variable)
-        variable = ""
-        result = operate(firstValue,secondValue,operator)
-        display.textContent = result
-        operator = "*";
-        firstValue = result
-    }else{    
-        operator = "*";
-        firstValue = parseFloat(variable)
-        variable = ""
-        display.textContent = variable
-    }
+    changeValue("*")
 })
 
 division.addEventListener("click",() =>{
-    if (firstValue != ""){  
-        secondValue = parseFloat(variable)
-        variable =""
-        result = operate(firstValue,secondValue,operator)
-        display.textContent = result;
-        operator = "÷";  
-        firstValue = result;
-    }else{ 
-        operator = "÷";
-        firstValue = parseFloat(variable)
-        variable = "";
-        display.textContent = variable;
-    }
+    changeValue("÷")
 })
 
 equalTo.addEventListener("click",()=>{
