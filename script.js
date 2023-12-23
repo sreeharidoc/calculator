@@ -17,7 +17,7 @@ function divide(a,b){
 
 var operator = "";
 var variable = "";
-var firstValue;
+var firstValue = "";
 var secondValue;
 var result;
 
@@ -201,38 +201,76 @@ zero.addEventListener("click",() =>{
 })
 
 addition.addEventListener("click",() =>{
-    operator = "+";
-    firstValue = parseInt(variable)
-    variable = ""
-    display.textContent = variable
+    if (firstValue != ""){
+        secondValue = parseInt(variable)
+        variable = ""
+        result = operate(firstValue,secondValue,operator)
+        operator = "+"
+        display.textContent = result
+        firstValue = result
+    }else{
+        operator = "+"
+        firstValue = parseInt(variable)
+        variable = ""
+        display.textContent = variable
+    }
 })
 
 subtraction.addEventListener("click",() =>{
-    operator = "-";
-    firstValue = parseInt(variable)
-    variable = ""
-    display.textContent = variable
+    if (firstValue != ""){
+        secondValue = parseInt(variable)
+        variable =""
+        result = operate(firstValue,secondValue,operator)
+        operator = "-";
+        display.textContent = result
+        firstValue = result
+    }else{
+        operator = "-";
+        firstValue = parseInt(variable)
+        variable = ""
+        display.textContent = variable
+    }
 })
 
 multiplication.addEventListener("click",() =>{
-    operator = "*";
-    firstValue = parseInt(variable)
-    variable = ""
-    display.textContent = variable
+    if (firstValue != ""){
+        secondValue = parseInt(variable)
+        variable = ""
+        result = operate(firstValue,secondValue,operator)
+        operator = "*";
+        display.textContent = result
+        firstValue = result
+    }else{    
+        operator = "*";
+        firstValue = parseInt(variable)
+        variable = ""
+        display.textContent = variable
+    }
 })
 
 division.addEventListener("click",() =>{
-    operator = "÷";
-    firstValue = parseInt(variable)
-    variable = ""
-    display.textContent = variable
+    if (firstValue != ""){  
+        secondValue = parseInt(variable)
+        variable =""
+        result = operate(firstValue,secondValue,operator)
+        operator = "÷";  
+        display.textContent = result
+        firstValue = result
+    }else{ 
+        operator = "÷";
+        firstValue = parseInt(variable)
+        variable = ""
+        display.textContent = variable
+    }
 })
 
 equalTo.addEventListener("click",()=>{
     secondValue = parseInt(variable)
     result = operate(firstValue,secondValue,operator)
     display.textContent = result;
+    firstValue = ""
     variable = result
+    operator = ""
 })
 
 clear.addEventListener("click",()=>{
@@ -243,6 +281,6 @@ clear.addEventListener("click",()=>{
     display.textContent = "0"
 })
 
-
+console.log(firstValue)
 
 body.appendChild(container)
