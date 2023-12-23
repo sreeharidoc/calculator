@@ -24,13 +24,13 @@ var result;
 function operate(num1,num2,operator){
     switch(operator){
         case '+':
-            return add(num1,num2).toFixed(2);
+            return parseFloat(add(num1,num2).toFixed(2));
         case "-":
-            return subtract(num1,num2).toFixed(2);
+            return parseFloat(subtract(num1,num2).toFixed(2));
         case "*":
-            return multiply(num1,num2).toFixed(2);
+            return parseFloat(multiply(num1,num2).toFixed(2));
         case "÷":
-            return divide(num1,num2).toFixed(2);
+            return parseFloat(divide(num1,num2).toFixed(2));
         default:
             alert("No Value")
     }
@@ -205,8 +205,8 @@ addition.addEventListener("click",() =>{
         secondValue = parseFloat(variable)
         variable = ""
         result = operate(firstValue,secondValue,operator)
-        operator = "+"
         display.textContent = result
+        operator = "+"
         firstValue = result
     }else{
         operator = "+"
@@ -221,8 +221,8 @@ subtraction.addEventListener("click",() =>{
         secondValue = parseFloat(variable)
         variable =""
         result = operate(firstValue,secondValue,operator)
-        operator = "-";
         display.textContent = result
+        operator = "-";
         firstValue = result
     }else{
         operator = "-";
@@ -237,8 +237,8 @@ multiplication.addEventListener("click",() =>{
         secondValue = parseFloat(variable)
         variable = ""
         result = operate(firstValue,secondValue,operator)
-        operator = "*";
         display.textContent = result
+        operator = "*";
         firstValue = result
     }else{    
         operator = "*";
@@ -253,8 +253,8 @@ division.addEventListener("click",() =>{
         secondValue = parseFloat(variable)
         variable =""
         result = operate(firstValue,secondValue,operator)
-        operator = "÷";  
         display.textContent = result;
+        operator = "÷";  
         firstValue = result;
     }else{ 
         operator = "÷";
