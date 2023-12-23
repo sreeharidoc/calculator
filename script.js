@@ -24,13 +24,13 @@ var result;
 function operate(num1,num2,operator){
     switch(operator){
         case '+':
-            return add(num1,num2);
+            return add(num1,num2).toFixed(2);
         case "-":
-            return subtract(num1,num2);
+            return subtract(num1,num2).toFixed(2);
         case "*":
-            return multiply(num1,num2);
+            return multiply(num1,num2).toFixed(2);
         case "÷":
-            return divide(num1,num2);
+            return divide(num1,num2).toFixed(2);
         default:
             alert("No Value")
     }
@@ -202,7 +202,7 @@ zero.addEventListener("click",() =>{
 
 addition.addEventListener("click",() =>{
     if (firstValue != ""){
-        secondValue = parseInt(variable)
+        secondValue = parseFloat(variable)
         variable = ""
         result = operate(firstValue,secondValue,operator)
         operator = "+"
@@ -210,7 +210,7 @@ addition.addEventListener("click",() =>{
         firstValue = result
     }else{
         operator = "+"
-        firstValue = parseInt(variable)
+        firstValue = parseFloat(variable)
         variable = ""
         display.textContent = variable
     }
@@ -218,7 +218,7 @@ addition.addEventListener("click",() =>{
 
 subtraction.addEventListener("click",() =>{
     if (firstValue != ""){
-        secondValue = parseInt(variable)
+        secondValue = parseFloat(variable)
         variable =""
         result = operate(firstValue,secondValue,operator)
         operator = "-";
@@ -226,7 +226,7 @@ subtraction.addEventListener("click",() =>{
         firstValue = result
     }else{
         operator = "-";
-        firstValue = parseInt(variable)
+        firstValue = parseFloat(variable)
         variable = ""
         display.textContent = variable
     }
@@ -234,7 +234,7 @@ subtraction.addEventListener("click",() =>{
 
 multiplication.addEventListener("click",() =>{
     if (firstValue != ""){
-        secondValue = parseInt(variable)
+        secondValue = parseFloat(variable)
         variable = ""
         result = operate(firstValue,secondValue,operator)
         operator = "*";
@@ -242,7 +242,7 @@ multiplication.addEventListener("click",() =>{
         firstValue = result
     }else{    
         operator = "*";
-        firstValue = parseInt(variable)
+        firstValue = parseFloat(variable)
         variable = ""
         display.textContent = variable
     }
@@ -250,37 +250,39 @@ multiplication.addEventListener("click",() =>{
 
 division.addEventListener("click",() =>{
     if (firstValue != ""){  
-        secondValue = parseInt(variable)
+        secondValue = parseFloat(variable)
         variable =""
         result = operate(firstValue,secondValue,operator)
         operator = "÷";  
-        display.textContent = result
-        firstValue = result
+        display.textContent = result;
+        firstValue = result;
     }else{ 
         operator = "÷";
-        firstValue = parseInt(variable)
-        variable = ""
-        display.textContent = variable
+        firstValue = parseFloat(variable)
+        variable = "";
+        display.textContent = variable;
     }
 })
 
 equalTo.addEventListener("click",()=>{
-    secondValue = parseInt(variable)
-    result = operate(firstValue,secondValue,operator)
-    display.textContent = result;
-    firstValue = ""
-    variable = result
-    operator = ""
+    if(firstValue == "" || variable == ""){
+        alert("Enter both values")
+    }else{
+        secondValue = parseFloat(variable)
+        result = operate(firstValue,secondValue,operator)
+        display.textContent = result;
+        firstValue = "";
+        variable = result;
+        operator = "";
+    }
 })
 
 clear.addEventListener("click",()=>{
-    firstValue =""
-    secondValue =""
-    variable = ""
-    operator = ""
-    display.textContent = "0"
+    firstValue ="";
+    secondValue ="";
+    variable = "";
+    operator = "";
+    display.textContent = "0";
 })
-
-console.log(firstValue)
 
 body.appendChild(container)
